@@ -62,6 +62,11 @@ docker ps -a
 # Stop the container
 docker stop <Container_Name>
 ```
+# References
+* Docker commands - https://docs.docker.com/engine/reference/commandline/docker/
+* Install Docker on windows https://www.youtube.com/watch?v=S7NVloq0EBc
+* https://devhints.io/docker
+
 
 # Docker commands
 | Command  | Description |
