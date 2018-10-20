@@ -62,10 +62,38 @@ docker ps -a
 # Stop the container
 docker stop <Container_Name>
 ```
+#Running MongoDB in docker container
+```
+# pull latest mongo image from docker hub
+ docker pull mongo
+
+# Run mongod server in docker container with port 27017
+docker run --name <SOME_NAME> -d -p 27017:27017 mongo mongod
+# bash into the container
+docker exec -it <YOUR_CONTAINER_NAME> bash
+
+# Connect to mongo
+mongo
+
+# Create user
+use admin
+db.createUser({user:"sachin",pwd:"password",roles:[{role:"root",db:"admin"}]})
+exit from the mongo shell and container
+
+# get your host IP. check the URL value to get the docker IP 
+docker-machine ls
+
+# now you can connect to mongo from any client(docker) or from your Host using mongo compass/ cli
+mongo -u "sachin" -p "password" YOURHOSTIP --authenticationDatabase "admin"
+
+```
+
+
 # References
 * Docker commands - https://docs.docker.com/engine/reference/commandline/docker/
 * Install Docker on windows https://www.youtube.com/watch?v=S7NVloq0EBc
 * https://devhints.io/docker
+* https://github.com/docker-library/docs/tree/master/mongo
 
 
 # Docker commands
