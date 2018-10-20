@@ -40,7 +40,8 @@ docker build -f Dockerfile -t <Image tag name> .
 -f  point to your Dockerfile in your system
 -t Image tag name
 ```diff
-- Dont forget to add the period at the end else you will get an error "docker build" requires exactly 1 argument.
+- Dont forget to add the period at the end else you will get an 
+error "docker build" requires exactly 1 argument.
 ```
 * Verify the docker image using ```dokcer images``` command
 * Time to run our **First** Docker application. Run the below command
