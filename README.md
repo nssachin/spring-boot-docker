@@ -62,3 +62,13 @@ docker ps -a
 # Stop the container
 docker stop <Container_Name>
 ```
+
+# Docker commands
+| Command  | Description |
+| ------------- | ------------- |
+| docker -v  | Docker version  |
+| docker ps -a  | Show all running containers |
+| docker container ls  | List containers |
+| docker stop <container_name>  | Stop running container specified |
+| docker build -f Dockerfile -t <Image tag name> .  | Build your docker image from ```Dockerfile``` |
+| docker run -d -p 8081:8080 <Image tag name>  | Run your docker container |
