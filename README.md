@@ -47,10 +47,18 @@ docker build -f Dockerfile -t <Image tag name> .
 ```
 docker run -p 8080:8080 <Image tag name>
 ```
-By default docker will runn in ```attached mode``` i.e the output from the process is displayed on the terminal session. You would need to open duplicate terminal to execute other docker commands.
+By default docker will run in ```attached mode``` i.e the output from the process is displayed on the terminal session. You would need to open duplicate terminal to execute other docker commands.
 
 To make your process run in background add the -d flag to the docker run command.
 ```
 docker run -d -p 8081:8080 <Image tag name>
 ```
-If you want to make the docker container accessible from host machine we need to add the -p flag to the ```docker run``` command. In the above example we used the ```-p``` flag to publish ```8081```(left to colon) port from host to the container to port ```8080```(right to colon) within the container.
+If you want to make the docker container accessible from host machine we need to add the -p flag to the ```docker run``` command. In the above example we used the ```-p``` flag to publish ```8081```(left to colon) port from host to the container to port ```8080```(right to colon) within the container. 
+* Once your docker service is running you can access it from your host browser using the ```http://docker_ip:host_port/```
+* If you have started docker in detached(run in background) then you can stop your container using below command
+```
+# Find the container name to stop
+docker ps -a
+# Stop the container
+docker stop <Container_Name>
+```
