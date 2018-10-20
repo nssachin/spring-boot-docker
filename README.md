@@ -42,8 +42,15 @@ docker build -f Dockerfile -t <Image tag name> .
 ```diff
 - Dont forget to add the period at the end else you will get an error "docker build" requires exactly 1 argument.
 ```
+* Verify the docker image using ```dokcer images``` command
+* Time to run our **First** Docker application. Run the below command
+```
+docker run -p 8080:8080 <Image tag name>
+```
+By default docker will runn in ```attached mode``` i.e the output from the process is displayed on the terminal session. You would need to open duplicate terminal to execute other docker commands.
 
-
-
-
-
+To make your process run in background add the -d flag to the docker run command.
+```
+docker run -d -p 8081:8080 <Image tag name>
+```
+If you want to make the docker container accessible from host machine we need to add the -p flag to the ```docker run``` command. In the above example we used the ```-p``` flag to publish ```8081```(left to colon) port from host to the container to port ```8080```(right to colon) within the container.
