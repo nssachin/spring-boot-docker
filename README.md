@@ -165,7 +165,7 @@ D:\Sachin\data\appcode\Spring-Docker\spring-docker>mvn docker:stop
 [INFO] Finished at: 2018-10-21T19:42:58+01:00
 [INFO] ------------------------------------------------------------------------
 ```
-Similar to fabri8o you can use spotify's docker-maven-plugin.
+Similar to fabri8o you can use spotify's docker-maven-plugin to make a docker container from the springboot app.
 
 # Running MongoDB in docker container
 ```
