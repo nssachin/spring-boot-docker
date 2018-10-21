@@ -62,7 +62,7 @@ docker ps -a
 # Stop the container
 docker stop <Container_Name>
 ```
-#Running MongoDB in docker container
+# Running MongoDB in docker container
 ```
 # pull latest mongo image from docker hub
  docker pull mongo
