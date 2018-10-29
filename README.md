@@ -213,3 +213,5 @@ mongo -u "sachin" -p "password" YOURHOSTIP --authenticationDatabase "admin"
 | docker stop <container_name>  | Stop running container specified |
 | docker build -f Dockerfile -t <Image tag name> .  | Build your docker image from ```Dockerfile``` |
 | docker run -d -p 8081:8080 <Image tag name>  | Run your docker container |
+| docker rm $(docker ps -a -q)  | Delete all containers |
+| docker rmi $(docker images -q) | Delete all images |
